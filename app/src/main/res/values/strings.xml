@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">勇士斗恶龙</string>
+    
+    <!-- 主菜单按钮 -->
+    <string name="menu_start_game">开始游戏</string>
+    <string name="menu_continue_game">继续游戏</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_exit">退出</string>
+    <string name="main_menu">返回主菜单</string>
+    
+    <!-- 游戏标题 -->
+    <string name="game_title">勇士斗恶龙</string>
+    <string name="game_subtitle">踏上讨伐恶龙的冒险之旅</string>
+    
+    <!-- 游戏界面 -->
+    <string name="player_avatar">角色头像</string>
+    <string name="player_name_placeholder">勇士</string>
+    <string name="level_label">等级: </string>
+    <string name="exp_label">经验: </string>
+    <string name="hp_icon">生命值图标</string>
+    <string name="gold_icon">金币图标</string>
+    <string name="game_map">地图</string>
+    <string name="inventory">背包</string>
+    <string name="menu">菜单</string>
+    <string name="game_start_text">在一个宁静的小村庄，村民们过着平静的生活，直到一条恶龙出现在村外的山洞中，开始威胁村民的安全。村长寻找勇敢的勇士前往讨伐恶龙，保卫村庄。你决定接受村长的委托，踏上讨伐恶龙的冒险之旅。</string>
+    <string name="dialog_enter_name">请输入你的名字</string>
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="create_character">创建角色</string>
+    <string name="next">继续</string>
+    <string name="option_1">选择道路1</string>
+    <string name="option_2">选择道路2</string>
+    <string name="option_3">选择道路3</string>
+    <string name="save_game">保存游戏</string>
+    <string name="battle_start">战斗开始!</string>
+    <string name="battle_victory">战斗胜利!</string>
+    <string name="battle_defeat">战斗失败!</string>
+    
+    <!-- 游戏活动界面 -->
+    <string name="player_placeholder">玩家名称</string>
+    <string name="health_placeholder">HP: 100/100</string>
+    <string name="return_to_village">返回村庄</string>
+    <string name="enter_name_prompt">请输入你的勇士名称</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- 游戏主题颜色 -->
+    <color name="primary">#8B5A2B</color>
+    <color name="primary_dark">#6B4226</color>
+    <color name="accent">#D4B88C</color>
+    
+    <!-- 文本颜色 -->
+    <color name="text_primary">#3E2723</color>
+    <color name="text_secondary">#5D4037</color>
+    <color name="text_light">#F5E6CA</color>
+</resources>

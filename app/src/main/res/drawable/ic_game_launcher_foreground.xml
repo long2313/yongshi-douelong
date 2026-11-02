@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108"
+    android:tint="#FFFFFF">
+  <group android:scaleX="0.3"
+      android:scaleY="0.3"
+      android:translateX="27"
+      android:translateY="27">
+    
+    <!-- 盾牌背景 -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M90,10L90,10c44.1,0,80,35.9,80,80v10c0,44.1-35.9,80-80,80h0c-44.1,0-80-35.9-80-80V90C10,45.9,45.9,10,90,10z"/>
+    
+    <!-- 盾牌边缘 -->
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M90,20c38.7,0,70,31.3,70,70v10c0,38.7-31.3,70-70,70c-38.7,0-70-31.3-70-70V90C20,51.3,51.3,20,90,20z"/>
+    
+    <!-- 剑柄 -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M85,90L95,90L95,150L85,150z"/>
+    
+    <!-- 剑柄十字架 -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M65,95L115,95L115,105L65,105z"/>
+    
+    <!-- 剑刃 -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M80,35L100,35L90,90L80,35z"/>
+    
+    <!-- 盾牌中央装饰 -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M90,50m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+  </group>
+</vector> 

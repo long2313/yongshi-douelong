@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:minHeight="300dp">
+
+    <!-- 左侧按钮列表 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/playerInfoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="玩家信息"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="start|center_vertical"
+            android:textColor="#333333" />
+
+        <Button
+            android:id="@+id/inventoryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="背包"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="start|center_vertical"
+            android:textColor="#333333" />
+
+        <Button
+            android:id="@+id/savesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="存档列表"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="start|center_vertical"
+            android:textColor="#333333" />
+
+        <Button
+            android:id="@+id/achievementsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="成就列表"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="start|center_vertical"
+            android:textColor="#333333" />
+
+        <Button
+            android:id="@+id/settingsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="start|center_vertical"
+            android:textColor="#333333" />
+
+        <Button
+            android:id="@+id/exitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="返回主菜单"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="start|center_vertical"
+            android:textColor="#FF4444" />
+    </LinearLayout>
+
+    <!-- 右侧内容区域 -->
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:padding="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/contentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout> 
