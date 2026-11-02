@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey
     tableName = "fill_blank_question",
     foreignKeys = [
         ForeignKey(
-            entity = EnglishQuestion::class,
+            entity = SpanishQuestion::class,
             parentColumns = ["question_id"],
             childColumns = ["question_id"],
             onDelete = ForeignKey.CASCADE

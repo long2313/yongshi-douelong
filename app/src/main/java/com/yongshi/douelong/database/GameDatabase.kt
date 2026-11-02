@@ -12,7 +12,7 @@ import com.yongshi.douelong.database.dao.AchievementDao
 import com.yongshi.douelong.database.dao.BattleRecordDao
 import com.yongshi.douelong.database.dao.BattleRoundDao
 import com.yongshi.douelong.database.dao.ChoiceQuestionDao
-import com.yongshi.douelong.database.dao.EnglishQuestionDao
+import com.yongshi.douelong.database.dao.SpanishQuestionDao
 import com.yongshi.douelong.database.dao.EquipmentDao
 import com.yongshi.douelong.database.dao.FillBlankQuestionDao
 import com.yongshi.douelong.database.dao.GameSaveDao
@@ -33,7 +33,7 @@ import com.yongshi.douelong.database.model.Achievement
 import com.yongshi.douelong.database.model.BattleRecord
 import com.yongshi.douelong.database.model.BattleRound
 import com.yongshi.douelong.database.model.ChoiceQuestion
-import com.yongshi.douelong.database.model.EnglishQuestion
+import com.yongshi.douelong.database.model.SpanishQuestion
 import com.yongshi.douelong.database.model.Equipment
 import com.yongshi.douelong.database.model.FillBlankQuestion
 import com.yongshi.douelong.database.model.GameSave
@@ -67,7 +67,7 @@ import kotlinx.coroutines.launch
         PlayerItem::class,
         Monster::class,
         MonsterDrop::class,
-        EnglishQuestion::class,
+        SpanishQuestion::class,
         FillBlankQuestion::class,
         ChoiceQuestion::class,
         MonsterQuestion::class,
@@ -99,7 +99,7 @@ abstract class GameDatabase : RoomDatabase() {
     abstract fun playerItemDao(): PlayerItemDao
     abstract fun monsterDao(): MonsterDao
     abstract fun monsterDropDao(): MonsterDropDao
-    abstract fun englishQuestionDao(): EnglishQuestionDao
+    abstract fun spanishQuestionDao(): SpanishQuestionDao
     abstract fun fillBlankQuestionDao(): FillBlankQuestionDao
     abstract fun choiceQuestionDao(): ChoiceQuestionDao
     abstract fun monsterQuestionDao(): MonsterQuestionDao

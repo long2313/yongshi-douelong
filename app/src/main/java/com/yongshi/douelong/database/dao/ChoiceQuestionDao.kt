@@ -80,14 +80,14 @@ interface ChoiceQuestionDao {
     fun findByCorrectOption(correctOption: String): List<ChoiceQuestion>
     
     /**
-     * 通过英语题目信息获取选择题
+     * 通过西语题目信息获取选择题
      * 用于联合查询，获取特定难度的选择题
      * @param difficulty 难度级别
      * @return 选择题列表
      */
     @Query("""
         SELECT cq.* FROM choice_question cq
-        INNER JOIN english_question eq ON cq.question_id = eq.question_id
+        INNER JOIN spanish_question eq ON cq.question_id = eq.question_id
         WHERE eq.difficulty = :difficulty
     """)
     fun findByDifficulty(difficulty: Int): List<ChoiceQuestion>

@@ -2,7 +2,7 @@ package com.yongshi.douelong.database.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.yongshi.douelong.database.model.EnglishQuestion
+import com.yongshi.douelong.database.model.SpanishQuestion
 import com.yongshi.douelong.database.model.MonsterQuestion
 
 /**
@@ -84,27 +84,27 @@ interface MonsterQuestionDao {
     fun findByMonsterAndQuestion(monsterId: Long, questionId: Long): MonsterQuestion?
     
     /**
-     * 获取怪物的所有英语题目
-     * 联合查询，获取怪物关联的所有英语题目详情
+     * 获取怪物的所有西语题目
+     * 联合查询，获取怪物关联的所有西语题目详情
      * @param monsterId 怪物ID
-     * @return 英语题目列表
+     * @return 西语题目列表
      */
     @Query("""
-        SELECT eq.* FROM english_question eq
+        SELECT eq.* FROM spanish_question eq
         INNER JOIN monster_question mq ON eq.question_id = mq.question_id
         WHERE mq.monster_id = :monsterId
     """)
-    fun getEnglishQuestionsForMonster(monsterId: Long): List<EnglishQuestion>
+    fun getSpanishQuestionsForMonster(monsterId: Long): List<SpanishQuestion>
     
     /**
-     * 获取怪物的随机英语题目
+     * 获取怪物的随机西语题目
      * 基于权重随机选择，权重高的题目有更高的概率被选中
      * @param monsterId 怪物ID
      * @param limit 题目数量
-     * @return 英语题目列表
+     * @return 西语题目列表
      */
     @Query("""
-        SELECT eq.* FROM english_question eq
+        SELECT eq.* FROM spanish_question eq
         INNER JOIN monster_question mq ON eq.question_id = mq.question_id
         WHERE mq.monster_id = :monsterId
         ORDER BY 
@@ -114,7 +114,7 @@ interface MonsterQuestionDao {
           END DESC
         LIMIT :limit
     """)
-    fun getRandomQuestionsForMonster(monsterId: Long, limit: Int = 1): List<EnglishQuestion>
+    fun getRandomQuestionsForMonster(monsterId: Long, limit: Int = 1): List<SpanishQuestion>
     
     /**
      * 更新题目权重

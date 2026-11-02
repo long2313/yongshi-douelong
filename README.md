@@ -41,7 +41,7 @@
 
 | 表 | 题数 | 题型 |
 |---|---|---|
-| `english_question` | 103 | 西语术语 → 中文释义 |
+| `spanish_question` | 103 | 西语术语 → 中文释义 |
 | `choice_question` | 98 | 四选一 |
 | `fill_blank_question` | 4 | 填空 |
 
@@ -100,7 +100,7 @@ app/src/main/
 └─ res/                         布局、图标、样式
 ```
 
-数据库 18 张表：`player` `monster` `item` `equipment` `map` `map_node` `node_connection` `node_event` `achievement` `battle_record` `battle_round` `english_question` `choice_question` `fill_blank_question` `monster_drop` `monster_question` `game_save` `game_setting`。
+数据库 18 张表：`player` `monster` `item` `equipment` `map` `map_node` `node_connection` `node_event` `achievement` `battle_record` `battle_round` `spanish_question` `choice_question` `fill_blank_question` `monster_drop` `monster_question` `game_save` `game_setting`。
 
 ## 怎么加内容
 

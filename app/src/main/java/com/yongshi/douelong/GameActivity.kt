@@ -43,7 +43,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
     private lateinit var playerAchievementDao: PlayerAchievementDao
     private lateinit var achievementDao: AchievementDao
     private lateinit var monsterDao: MonsterDao
-    private lateinit var englishQuestionDao: EnglishQuestionDao
+    private lateinit var spanishQuestionDao: SpanishQuestionDao
     private lateinit var monsterQuestionDao: MonsterQuestionDao
     private lateinit var battleRecordDao: BattleRecordDao
     private lateinit var battleRoundDao: BattleRoundDao
@@ -129,7 +129,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
             playerAchievementDao = database.playerAchievementDao()
             achievementDao = database.achievementDao()
             monsterDao = database.monsterDao()
-            englishQuestionDao = database.englishQuestionDao()
+            spanishQuestionDao = database.spanishQuestionDao()
             monsterQuestionDao = database.monsterQuestionDao()
             battleRecordDao = database.battleRecordDao()
             battleRoundDao = database.battleRoundDao()
@@ -1522,7 +1522,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
                 }
 
                 // 随机选择5道对应难度的题目
-                val questions = englishQuestionDao.getRandomQuestionsByDifficultyRange(
+                val questions = spanishQuestionDao.getRandomQuestionsByDifficultyRange(
                     minDifficulty = questionDifficulty.first,
                     maxDifficulty = questionDifficulty.last,
                     limit = 5
@@ -1608,7 +1608,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
                 
                 // 获取怪物关联的题目
                 val monsterQuestions = withContext(Dispatchers.IO) {
-                    monsterQuestionDao.getEnglishQuestionsForMonster(monster.monster_id)
+                    monsterQuestionDao.getSpanishQuestionsForMonster(monster.monster_id)
                 }
                 
                 if (monsterQuestions.isEmpty()) {
@@ -1700,7 +1700,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
 
                     // 获取已使用的题目ID列表
                     val usedQuestionIds = withContext(Dispatchers.IO) {
-                        monsterQuestionDao.getEnglishQuestionsForMonster(monster.monster_id)
+                        monsterQuestionDao.getSpanishQuestionsForMonster(monster.monster_id)
                             .map { it.question_id }
                             .toSet()
                     }
@@ -1716,7 +1716,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
 
                     // 获取一道新的随机题目，排除已使用的题目
                     val newQuestion = withContext(Dispatchers.IO) {
-                        englishQuestionDao.getRandomQuestionsByDifficultyRangeExcluding(
+                        spanishQuestionDao.getRandomQuestionsByDifficultyRangeExcluding(
                             minDifficulty = difficultyRange.first,
                             maxDifficulty = difficultyRange.last,
                             excludeIds = usedQuestionIds.toList(),
@@ -1845,7 +1845,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
      * @param question 英语问题对象
      * @return 是否正确
      */
-    private suspend fun isAnswerCorrect(playerAnswer: String, question: EnglishQuestion): Boolean {
+    private suspend fun isAnswerCorrect(playerAnswer: String, question: SpanishQuestion): Boolean {
         if (playerAnswer.isEmpty()) return false
         
         return try {
@@ -2611,7 +2611,7 @@ class GameActivity : AppCompatActivity(), CoroutineScope by MainScope() {
      * @param question 问题
      * @return 玩家的答案
      */
-    private suspend fun showQuestionDialog(question: EnglishQuestion): String = suspendCoroutine { continuation ->
+    private suspend fun showQuestionDialog(question: SpanishQuestion): String = suspendCoroutine { continuation ->
         launch {
             try {
 

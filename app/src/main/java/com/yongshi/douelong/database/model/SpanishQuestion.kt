@@ -5,18 +5,18 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 /**
- * 英语题目实体类
- * 对应数据库中的EnglishQuestion表
+ * 西语题目实体类
+ * 对应数据库中的SpanishQuestion表
  */
 @Entity(
-    tableName = "english_question",
+    tableName = "spanish_question",
     indices = [
         Index("type"),
         Index("difficulty"),
         Index("category")
     ]
 )
-data class EnglishQuestion(
+data class SpanishQuestion(
     @PrimaryKey(autoGenerate = true)
     val question_id: Long = 0,
     

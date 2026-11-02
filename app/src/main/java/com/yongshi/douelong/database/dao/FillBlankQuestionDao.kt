@@ -88,14 +88,14 @@ interface FillBlankQuestionDao {
     fun findBySentence(sentence: String): List<FillBlankQuestion>
     
     /**
-     * 通过英语题目信息获取填空题
+     * 通过西语题目信息获取填空题
      * 用于联合查询，获取特定难度的填空题
      * @param difficulty 难度级别
      * @return 填空题列表
      */
     @Query("""
         SELECT fbq.* FROM fill_blank_question fbq
-        INNER JOIN english_question eq ON fbq.question_id = eq.question_id
+        INNER JOIN spanish_question eq ON fbq.question_id = eq.question_id
         WHERE eq.difficulty = :difficulty
     """)
     fun findByDifficulty(difficulty: Int): List<FillBlankQuestion>
