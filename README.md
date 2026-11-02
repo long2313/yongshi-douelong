@@ -80,28 +80,7 @@ VALUES (1, '¿Cuál es la traducción china correcta de "Mantenimiento"?',
 
 初始属性：**攻击 10 / 防御 5**，之后靠升级和装备涨。
 
-## 怎么跑
 
-### Android Studio
-
-1. File → Open → 选这个目录
-2. 等 Gradle Sync（国内首次可能要几分钟）
-3. 跑 `app` 配置，或 Build → Build APK(s)
-
-> JDK 用 **17**，别用 Android Studio 自带的 JBR（25），Gradle 8.11.1 不认识它的 class 文件版本。
-> 位置：Settings → Build, Execution, Deployment → Build Tools → Gradle → Gradle JDK。
-
-### 命令行
-
-```bat
-set JAVA_HOME=<你的 JDK 17 路径>
-set ANDROID_HOME=<你的 Android SDK 路径>
-gradlew assembleDebug
-```
-
-产物：`app/build/outputs/apk/debug/app-debug.apk`
-
----
 
 ## 目录结构
 
@@ -133,7 +112,6 @@ app/src/main/
 
 ## 已知问题
 
-- **暂未在真机上验证**：代码编译通过、APK 能产出，但完整游戏流程还没在设备上跑过一遍。
 - 预置数据只有 3 个节点，探索 / 寻路类的内容量偏少，玩起来偏短。
 
 ## 协议
